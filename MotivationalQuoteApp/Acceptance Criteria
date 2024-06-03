@@ -1,0 +1,6 @@
+It is done when:
+- new project has been created
+- App name has the work quote in the title
+- the package name follows the Android naming convension
+- In the middle of the screen there is some text that displays a motivational quote for software developers.
+- The app runs on an emmulator
