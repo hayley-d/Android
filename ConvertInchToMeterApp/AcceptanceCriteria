@@ -1,0 +1,9 @@
+- New Android project that runs on an emmulator
+- Single screen layout (linear layout with vertical orientation)
+- Contains an image view, EditText for user input, calculate button and textView to display result
+- Java code should contain 3 methods:
+  *findViews(): stores the Views as fileds
+  *convertToMeters(): performs calculations
+  *displayResult(): formats the values and displays the result (2 deciaml places)
+- demonstarate knowledge of conditional statements
+- alert using Toasts
