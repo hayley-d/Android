@@ -29,6 +29,7 @@
         android:orientation="horizontal">
 
         <RadioButton
+            android:id="@+id/radio_male"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="16dp"
@@ -36,6 +37,7 @@
             android:textSize="16dp" />
 
         <RadioButton
+            android:id="@+id/radio_female"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Female"
@@ -58,6 +60,8 @@
             android:textSize="16dp" />
 
         <EditText
+            android:paddingTop="10dp"
+            android:id="@+id/text_age"
             android:layout_width="150dp"
             android:layout_height="30dp"
             android:inputType="number" />
@@ -75,10 +79,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Height (cm)"
+            android:text="Height (m)"
             android:textSize="16dp" />
 
         <EditText
+            android:paddingTop="10dp"
+            android:id="@+id/text_height"
             android:layout_width="150dp"
             android:layout_height="30dp"
             android:inputType="numberDecimal" />
@@ -99,15 +105,18 @@
             android:textSize="16dp" />
 
         <EditText
+            android:id="@+id/text_weight"
             android:layout_width="150dp"
             android:layout_height="30dp"
             android:inputType="numberDecimal"
-            android:textSize="16dp" />
+            android:textSize="16dp"
+            android:paddingTop="10dp"/>
     </LinearLayout>
 
     <!--Calculate-->
     <!--This is a view (Button == view/widget)-->
     <Button
+        android:id="@+id/calculate_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -120,6 +129,7 @@
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/result_bmi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="24dp"
@@ -127,6 +137,7 @@
             android:textSize="16dp" />
 
         <TextView
+            android:id="@+id/result_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="24dp"
