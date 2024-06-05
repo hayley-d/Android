@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     private void addEventListners(){
         //Create Intent
         Intent startersActivityIntent = new Intent(MainActivity.this,StartersActivity.class);
-        Intent mainsActivityIntent = new Intent(MainActivity.this,StartersActivity.class);
+        Intent mainsActivityIntent = new Intent(MainActivity.this,MainsActivity.class);
 
         starterCard.setOnClickListener(new View.OnClickListener() {
             @Override
