@@ -24,9 +24,9 @@ import com.hayleydodkins.resturantapplication.databinding.ActivityStartersBindin
 
 public class StartersActivity extends AppCompatActivity {
 
-    CardView starter1;
+    /*CardView starter1;
     CardView starter2;
-    CardView starter3;
+    CardView starter3;*/
 
     ListView list;
 
@@ -50,9 +50,9 @@ public class StartersActivity extends AppCompatActivity {
     }
 
     private void getValues(){
-        this.starter1 = findViewById(R.id.starter_card1);
+        /*this.starter1 = findViewById(R.id.starter_card1);
         this.starter2 = findViewById(R.id.starter_card2);
-        this.starter3 = findViewById(R.id.starter_card3);
+        this.starter3 = findViewById(R.id.starter_card3);*/
         this.list = findViewById(R.id.list_view);
     }
 
