@@ -39,9 +39,6 @@ public class MainsActivity extends AppCompatActivity {
     }
 
     private void getValues(){
-        //this.main1 = findViewById(R.id.main_card1);
-        /*this.main2 = findViewById(R.id.main_card2);
-        this.main3 = findViewById(R.id.main_card3);*/
         this.list = findViewById(R.id.list_view);
     }
 

@@ -50,9 +50,6 @@ public class StartersActivity extends AppCompatActivity {
     }
 
     private void getValues(){
-        /*this.starter1 = findViewById(R.id.starter_card1);
-        this.starter2 = findViewById(R.id.starter_card2);
-        this.starter3 = findViewById(R.id.starter_card3);*/
         this.list = findViewById(R.id.list_view);
     }
 
