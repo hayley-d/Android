@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,10 +16,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        RecyclerView list = findViewById(R.id.main);
+
+        Project[] projects = new Project[] {
+            new Project("Getting Started Application","First Android project I coded!",R.drawable.getting_started),
+            new Project("BMI Calculator","Just a simple BMI calculator.",R.drawable.tape),
+            new Project("Inch to Meter Calculator","A calculator that converts inches to meters. (but not the other way round :( )",R.drawable.calculator),
+            new Project("Motivational Quote Application","A static page that displays a single motivational quote (very interesting). ",R.drawable.quote),
+            new Project("Restaurant Application","A restaurant application for a waffle cafe called Stack Overflow, they only sell waffles.",R.drawable.hungry_developer)
+        };
+
+        ProjectsAdapter adapter = new ProjectsAdapter(projects);
+
+        list.setAdapter(adapter);
     }
 }
