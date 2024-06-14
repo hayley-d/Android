@@ -11,6 +11,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.textfield.TextInputEditText
 
+
+
+
 class MainActivity : AppCompatActivity() {
 
     private var contactNameInput : TextInputEditText? = null
@@ -51,6 +54,16 @@ class MainActivity : AppCompatActivity() {
         val contactName = contactNameInput?.getText().toString()
         val number = numberInput?.getText().toString()
         val displayName = displayNameInput?.getText().toString()
+        val date = startDateInput?.getText().toString()
+        val junior = juniorCheckBox?.isChecked
+        val immStart = immStartCheckBox?.isChecked
+        val jobTitle = jobTitleInput?.selectedItem.toString()
+
+        if(jobTitle != null && immStart != null && junior != null)
+        {
+            val textStr = "Contact Name: $contactName\n Contact Number: $number\nDisplay Name: $displayName\nStart Date: $date\nIs Junior: $junior\nImmidate Start: $immStart\nJob Title: $jobTitle"
+        }
+
 
 
     }
