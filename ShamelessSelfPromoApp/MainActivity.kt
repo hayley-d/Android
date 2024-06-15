@@ -1,5 +1,6 @@
 package com.hayleydodkins.shamlessselfpromoapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
@@ -64,7 +65,20 @@ class MainActivity : AppCompatActivity() {
             val textStr = "Contact Name: $contactName\n Contact Number: $number\nDisplay Name: $displayName\nStart Date: $date\nIs Junior: $junior\nImmidate Start: $immStart\nJob Title: $jobTitle"
         }
 
+        //Create new explicit intent
+        val previewActivityIntent = Intent(this,PreviewActivity::class.java)
 
+        //Pass the data through
+        previewActivityIntent.putExtra("contactName",contactName)
+        previewActivityIntent.putExtra("contactNumber",number)
+        previewActivityIntent.putExtra("displayName",displayName)
+        previewActivityIntent.putExtra("startDate",date)
+        previewActivityIntent.putExtra("junior",junior)
+        previewActivityIntent.putExtra("immStart",immStart)
+        previewActivityIntent.putExtra("jobTitle",jobTitle)
+
+        //navigate to the new activity
+        startActivity(previewActivityIntent)
 
     }
 }
