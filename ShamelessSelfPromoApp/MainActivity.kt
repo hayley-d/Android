@@ -2,6 +2,7 @@ package com.hayleydodkins.shamlessselfpromoapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.Spinner
@@ -38,6 +39,12 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this,"Creating Promo ...",Toast.LENGTH_LONG).show()
             onSubmitClick()
         }
+
+        val spinnerValues : Array<String> = arrayOf("Software Engineer","Penetration Tester","Chief Information Security Officer","Network Engineer","Front-end Developer","Backend Developer","Game Designer")
+
+        val spinnerAdapter = ArrayAdapter<String> (this,android.R.layout.simple_spinner_dropdown_item,spinnerValues)
+        jobTitleInput  = findViewById(R.id.spinner_job_title)
+        jobTitleInput?.adapter = spinnerAdapter
     }
 
 
@@ -49,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         startDateInput  = findViewById(R.id.edit_text_start)
         juniorCheckBox  = findViewById(R.id.check_box_junior)
         immStartCheckBox  = findViewById(R.id.check_box_im_start)
-        jobTitleInput  = findViewById(R.id.spinner_job_title)
+
 
         //Convert into strings
         val contactName = contactNameInput?.getText().toString()
