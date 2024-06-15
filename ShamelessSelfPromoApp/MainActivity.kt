@@ -59,15 +59,15 @@ class MainActivity : AppCompatActivity() {
 
 
         //Convert into strings
-        val contactName = contactNameInput?.getText().toString()
-        val number = numberInput?.getText().toString()
-        val displayName = displayNameInput?.getText().toString()
-        val date = startDateInput?.getText().toString()
-        val junior = juniorCheckBox?.isChecked
-        val immStart = immStartCheckBox?.isChecked
-        val jobTitle = jobTitleInput?.selectedItem.toString()
+        val contactName : String = contactNameInput?.getText().toString()
+        val number : String = numberInput?.getText().toString()
+        val displayName : String = displayNameInput?.getText().toString()
+        val date : String = startDateInput?.getText().toString()
+        val junior : Boolean? = juniorCheckBox?.isChecked
+        val immStart : Boolean? = immStartCheckBox?.isChecked
+        val jobTitle : String = jobTitleInput?.selectedItem.toString()
 
-        if(jobTitle != null && immStart != null && junior != null)
+        if(immStart != null && junior != null)
         {
             val textStr = "Contact Name: $contactName\n Contact Number: $number\nDisplay Name: $displayName\nStart Date: $date\nIs Junior: $junior\nImmidate Start: $immStart\nJob Title: $jobTitle"
         }
@@ -75,14 +75,14 @@ class MainActivity : AppCompatActivity() {
         //Create new explicit intent
         val previewActivityIntent = Intent(this,PreviewActivity::class.java)
 
+        //Create the message
+        val isJunior = junior ?: false
+        val immidateStart = immStart?:false
+        val message = Message(contactName,number,displayName,date,isJunior,immidateStart,jobTitle)
+
         //Pass the data through
-        previewActivityIntent.putExtra("contactName",contactName)
-        previewActivityIntent.putExtra("contactNumber",number)
-        previewActivityIntent.putExtra("displayName",displayName)
-        previewActivityIntent.putExtra("startDate",date)
-        previewActivityIntent.putExtra("junior",junior)
-        previewActivityIntent.putExtra("immStart",immStart)
-        previewActivityIntent.putExtra("jobTitle",jobTitle)
+        previewActivityIntent.putExtra("message",message)
+
 
         //navigate to the new activity
         startActivity(previewActivityIntent)
