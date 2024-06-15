@@ -6,6 +6,8 @@ class Message(val contactName : String, val contactNumber : String, val displayN
     : Serializable {
 
     //Objects can be persisted through serialization
-    
+    fun getJobDescription() : String = if(junior) "a Junior $jobTitle" else "a $jobTitle"
+
+    fun getAvailability() : String = if(immidiateStart) "immediately" else "from $startDate"
 
 }

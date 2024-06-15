@@ -13,9 +13,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.textfield.TextInputEditText
 
-
-
-
 class MainActivity : AppCompatActivity() {
 
     private var contactNameInput : TextInputEditText? = null
@@ -69,7 +66,7 @@ class MainActivity : AppCompatActivity() {
 
         if(immStart != null && junior != null)
         {
-            val textStr = "Contact Name: $contactName\n Contact Number: $number\nDisplay Name: $displayName\nStart Date: $date\nIs Junior: $junior\nImmidate Start: $immStart\nJob Title: $jobTitle"
+            val textStr = "Contact Name: $contactName\n Contact Number: $number\nMy name is $displayName\nStart Date: $date\nIs Junior: $junior\nImmidate Start: $immStart\nJob Title: $jobTitle"
         }
 
         //Create new explicit intent
