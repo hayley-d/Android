@@ -26,7 +26,11 @@ class MainActivity : AppCompatActivity() {
         this.bottomNav = binding.bottomNav
 
         supportFragmentManager.commit {
-            add(R.id.frame_content, RunningFragment())
+            replace(R.id.frame_content, RunningFragment())
+        }
+
+        supportFragmentManager.commit {
+            replace(R.id.frame_content, CyclingFragment())
         }
     }
 }
