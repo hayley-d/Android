@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    namespace = "com.hayleydodkins.recordkeeperapp"
+    namespace = "com.example.recordkeeperapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.hayleydodkins.recordkeeperapp"
-        minSdk = 27
+        applicationId = "com.example.recordkeeperapp"
+        minSdk = 25
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -32,6 +32,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures{
+        viewBinding = true
     }
 }
 
