@@ -2,4 +2,9 @@
     <string name="app_name">RecordKeeperApp</string>
     <string name="running">Running</string>
     <string name="bike">Cycling</string>
+    <string name="km5">5km</string>
+    <string name="km10">10km</string>
+    <string name="km15">15km</string>
+    <string name="km20">20km</string>
+    <string name="km25">25km</string>
 </resources>
